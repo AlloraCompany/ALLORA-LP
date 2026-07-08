@@ -67,15 +67,15 @@ export default function RootLayout({
     <CursorContextProvider>
       <html lang="en">
         <GoogleTagManager gtmId="GTM-K9NH8K63" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-          }}
-        />
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
         >
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+            }}
+          />
           <PageTransitionEffect>{children}</PageTransitionEffect>
         </body>
       </html>
