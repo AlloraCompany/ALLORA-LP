@@ -7,7 +7,7 @@ import { HTMLMesh } from "three/examples/jsm/Addons.js";
 const Asterist3d = () => {
   const svgData = useLoader(SVGLoader, "/asterist.svg");
 
-  const shapes = svgData.paths.flatMap((path) => path.toShapes(true));
+  const shapes = svgData.paths.flatMap((path) => path.toShapes());
 
   const geometry = new THREE.ExtrudeGeometry(shapes, {
     depth: 30,
