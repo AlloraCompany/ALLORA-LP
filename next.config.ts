@@ -2,6 +2,17 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
+
+  // Propostas estáticas: cada pasta public/propostas/<cliente-vN>/index.html
+  // abre em /propostas/<cliente-vN>. Para publicar uma nova, basta criar a pasta.
+  async rewrites() {
+    return [
+      {
+        source: "/propostas/:slug",
+        destination: "/propostas/:slug/index.html",
+      },
+    ];
+  },
   turbopack: {
     rules: {
       '*.svg': {
