@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { HTMLAttributes } from "react";
+import type { JSX } from "react";
 
 export const ShowUpText = ({
   children,

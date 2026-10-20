@@ -19,7 +19,7 @@ export const DVDBouncing = () => {
   const dirY = useRef(1);
 
   // Ref para armazenar o ID da animação
-  const animationId = useRef<number>();
+  const animationId = useRef<number | undefined>(undefined);
 
   useEffect(() => {
     if (window.innerWidth < 768) {
